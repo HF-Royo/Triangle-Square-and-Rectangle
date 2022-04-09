@@ -1,0 +1,65 @@
+namespace System{
+
+    class code{
+
+        static void Main(String[] args){
+
+            string Option;
+
+            int side, side1, side2, side3, length, width, perimeterT, perimeterS, perimeterR;
+
+            // Formula for Triangle
+            // Perimeter = side1 + side2 + side3;
+            // Formula for Square
+            // Permiter = 4*side1;
+            // Formula for Rectangle
+            // (2*length) + (2*width)
+
+                Console.WriteLine("====P E R I M E T E R====");
+
+                Console.WriteLine("[A] Triangle");
+
+                Console.WriteLine("[B] Square");
+
+                Console.WriteLine("[C] Rectangle");
+
+                Console.Write("Select an option (A, B, or C): ");
+
+                Option = Console.ReadLine();
+
+
+                if (Option == "A" || Option == "a")
+                {
+                    Console.Write("Enter first side: ");
+                    side1 = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("Enter second side: ");
+                    side2 = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("Enter third side: ");
+                    side3 = Convert.ToInt32(Console.ReadLine());
+                    perimeterT = side1 + side2 + side3;
+                    Console.Write("Perimeter of Triangle: " + perimeterT);
+                }
+                else if (Option == "B" || Option == "b")
+                {
+                    Console.Write("Enter side: ");
+                    side = Convert.ToInt32(Console.ReadLine());
+                    perimeterS = 4*side;
+                    Console.Write("Perimeter of Square: " + perimeterS);
+                }
+                else if (Option == "C" || Option == "c")
+                {
+                    Console.Write("Enter Length: ");
+                    length = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("Enter Width: ");
+                    width = Convert.ToInt32(Console.ReadLine());
+                    perimeterR = (2*length) + (2*width);
+                    Console.Write("Perimeter of Rectangle: " + perimeterR);
+
+                }
+                else {
+                    Console.WriteLine("Invalid");
+                }
+     
+        }      
+    }
+}
